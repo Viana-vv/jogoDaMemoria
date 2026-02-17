@@ -126,7 +126,7 @@ h1{
     border-radius: 8px;
 } 
   #area-jogo img {
-    width: 90px;
+    width: 80px;
     height: 80px;
     cursor:pointer;
     border: 2px solid rgb(162, 0, 255);
@@ -134,7 +134,7 @@ h1{
 }
 #area-jogo{
     display: grid;
-    grid-template-columns: repeat(4, 90px);
+    grid-template-columns: repeat(4, 80px);
     gap: 5px;
     margin-top: 10px;
 }
