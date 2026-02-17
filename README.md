@@ -39,4 +39,4 @@ jogoDaMemoria/
 - Níveis de dificuldade.
 - Ranking de jogadores.
 
-Repositório disponível em: [jogoDaMemoria](https://github.com/Viana-vv/jogoDaMemoria)
+Repositório disponível em: [jogoDaMemoria](https://viana-vv.github.io/jogoDaMemoria/)
