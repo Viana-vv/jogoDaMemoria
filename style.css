@@ -1,0 +1,180 @@
+body{
+    background-color: black;
+    color: aliceblue;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+#area-jogo{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin-top: 20px;
+}
+#area-jogo img {
+    width: 100px;
+    height: 100px;
+    cursor:pointer;
+    border: 2px solid rgb(162, 0, 255);
+    border-radius: 8px;
+}
+#mensagem{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+    color: black;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+        position: fixed;
+     top: 50%;
+      left: 50%;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+
+}
+
+#mensagem img {
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+#mensagem p {
+    color: rgb(136, 93, 245);
+  font-size: 20px;
+  font-family: "Bungee", sans-serif;
+  font-style: normal;
+}
+
+#aviso{
+    display: none;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    position: fixed; 
+     top: 50%; 
+      left: 50%; 
+      z-index: 9999; 
+      transform: translate(-50%, -50%);
+
+}
+
+#aviso p{
+color: rgb(136, 93, 245);
+  font-size: 20px;
+  font-family: "Bungee", sans-serif;
+  font-style: normal;
+}
+
+#aviso img {
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+h1{
+    color: rgb(136, 93, 245);
+  font-family: "Bungee", sans-serif;
+  font-style: normal;
+}
+
+#reiniciar-jogo{
+    background-color: black;
+       color: rgb(255, 255, 255);
+  font-family: "Bungee", sans-serif;
+  font-style: normal;
+  padding: 20px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+#reiniciar-jogo:hover{
+       background-color: rgb(136, 93, 245);
+       color: rgb(255, 255, 255);
+}
+@media (max-width: 1000px) {
+ #aviso img {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+#mensagem img {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 8px;
+} 
+  #area-jogo img {
+    width: 90px;
+    height: 80px;
+    cursor:pointer;
+    border: 2px solid rgb(162, 0, 255);
+    border-radius: 8px;
+}
+#area-jogo{
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    gap: 5px;
+    margin-top: 10px;
+}
+}
+@media (min-width: 3500px) {
+ #aviso img {
+    width: 350px;
+    height: 350px;
+    margin-top: 20px;
+    border-radius: 16px;
+}
+
+#mensagem img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 16px;
+} 
+  #area-jogo img {
+    width: 400px;
+    height: 400px;
+    cursor:pointer;
+    border: 4px solid rgb(162, 0, 255);
+    border-radius: 8px;
+}#area-jogo{
+    display: grid;
+    grid-template-columns: repeat(4, 400px);
+    gap: 10px;
+    margin-top: 20px;
+}#reiniciar-jogo{
+    background-color: black;
+       color: rgb(255, 255, 255);
+  font-family: "Bungee", sans-serif;
+  font-style: normal;
+  padding: 40px;
+  font-size: 40px;
+  margin-top: 40px;
+  border-radius: 16px;
+}
+h1{
+    font-size: 50px;
+}
+}
