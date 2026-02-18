@@ -19,7 +19,7 @@ areaJogo.innerHTML = "";
  primeiraCarta = null;
  segundaCarta = null;
 bloqueado = false;
-
+tentativas = 0;
 
 cartas = [...imagens,...imagens];
 cartas.sort(() => Math.random() - 0.5);
@@ -37,7 +37,7 @@ setTimeout(function(){
     document.querySelectorAll(".carta").forEach(function(carta){
       carta.src = "img/costas.jpg"  ;
     });
-}, 5000);
+}, 10000);
 }
 
 
@@ -52,12 +52,12 @@ if(!primeiraCarta){
 }else if(!segundaCarta && this !== primeiraCarta){
     segundaCarta = this;
     verificaPar();
-
 }
 
 }
 
-
+let tentativas = 0;
+let maxTentativas = 3;
 function verificaPar(){
 bloqueado = true;
 if (primeiraCarta.dataset.valor === segundaCarta.dataset.valor){
@@ -66,14 +66,27 @@ if (primeiraCarta.dataset.valor === segundaCarta.dataset.valor){
 segundaCarta = null;
 bloqueado = false;
 verificarFimDeJogo();
-}else{
 
+}else {
+    let chancesRestantes = maxTentativas - tentativas;
+    tentativas++;
+if(tentativas < maxTentativas){
+          primeiraCarta.src = "img/costas.jpg" ;
+segundaCarta.src = "img/costas.jpg" ;
+    mostrarAvisoDeQuantidade(chancesRestantes);
+    primeiraCarta = null;
+segundaCarta = null;
+bloqueado = false;
+}
+else{
 setTimeout(function(){
    mostrarAviso();
    setTimeout(iniciarJogo, 5000)
 }, 1000);
 
-}}
+}
+}
+}
 
 function verificarFimDeJogo(){
     let todasViradas = [...document.querySelectorAll(".carta")]
@@ -99,6 +112,14 @@ function mostrarAviso(){
     setTimeout(() => {
         aviso.style.display = "none"; 
     }, 5000);
+}
+function mostrarAvisoDeQuantidade(chancesRestantes){
+    let avisoQuantidade = document.getElementById("quantidade");
+    avisoQuantidade.querySelector("p").textContent = `Você errou, mas ainda tem ${chancesRestantes} chance(s)!`;
+    avisoQuantidade.style.display = "flex"; 
+    setTimeout(() => {
+        avisoQuantidade.style.display = "none"; 
+    }, 3000);
 }
 
 
