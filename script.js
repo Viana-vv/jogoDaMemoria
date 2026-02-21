@@ -65,7 +65,11 @@ if (primeiraCarta.dataset.valor === segundaCarta.dataset.valor){
     primeiraCarta = null;
 segundaCarta = null;
 bloqueado = false;
-verificarFimDeJogo();
+
+ setTimeout(function(){
+   verificarFimDeJogo();
+   setTimeout(iniciarJogo, 5000)
+}, 1000);
 
 }else {
     let chancesRestantes = maxTentativas - tentativas;
@@ -94,7 +98,7 @@ function verificarFimDeJogo(){
     if(todasViradas){
         mostrarMensagem();
     }
-    setTimeout(iniciarJogo,5000)
+   
 }
 function mostrarMensagem(){
     let mensagem = document.getElementById("mensagem");
