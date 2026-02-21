@@ -70,7 +70,7 @@ verificarFimDeJogo();
 }else {
     let chancesRestantes = maxTentativas - tentativas;
     tentativas++;
-if(tentativas < maxTentativas){
+if(tentativas <= maxTentativas){
           primeiraCarta.src = "img/costas.jpg" ;
 segundaCarta.src = "img/costas.jpg" ;
     mostrarAvisoDeQuantidade(chancesRestantes);
