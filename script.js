@@ -91,12 +91,7 @@ function verificarFimDeJogo(){
     let todasViradas = [...document.querySelectorAll(".carta")]
     .every(carta =>!carta.src.includes("costas.jpg"));
     if(todasViradas){
-      
-        setTimeout(function(){
               mostrarMensagem();
-   setTimeout(iniciarJogo, 5000)
-}, 1000);
-
     }
    
 }
@@ -107,6 +102,7 @@ function mostrarMensagem(){
 
     setTimeout(() => {
         mensagem.style.display = "none";
+        setTimeout(iniciarJogo, 10000)
     }, 5000);
 }
 function mostrarAviso(){
