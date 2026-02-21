@@ -65,12 +65,7 @@ if (primeiraCarta.dataset.valor === segundaCarta.dataset.valor){
     primeiraCarta = null;
 segundaCarta = null;
 bloqueado = false;
-
- setTimeout(function(){
    verificarFimDeJogo();
-   setTimeout(iniciarJogo, 5000)
-}, 1000);
-
 }else {
     let chancesRestantes = maxTentativas - tentativas;
     tentativas++;
@@ -96,7 +91,12 @@ function verificarFimDeJogo(){
     let todasViradas = [...document.querySelectorAll(".carta")]
     .every(carta =>!carta.src.includes("costas.jpg"));
     if(todasViradas){
-        mostrarMensagem();
+      
+        setTimeout(function(){
+              mostrarMensagem();
+   setTimeout(iniciarJogo, 5000)
+}, 1000);
+
     }
    
 }
