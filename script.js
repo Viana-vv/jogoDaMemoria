@@ -94,6 +94,7 @@ function verificarFimDeJogo(){
     if(todasViradas){
         mostrarMensagem();
     }
+    setTimeout(iniciarJogo,5000)
 }
 function mostrarMensagem(){
     let mensagem = document.getElementById("mensagem");
